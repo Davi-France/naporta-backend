@@ -1,7 +1,12 @@
-# compiled output
-/dist
+# Node modules
 /node_modules
+/na-porta-api/node_modules
+
+# Build output
+/dist
+/na-porta-api/dist
 /build
+/na-porta-api/build
 
 # Logs
 logs
@@ -10,16 +15,16 @@ npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
 
-# OS
+# OS files
 .DS_Store
 
-# Tests
+# Coverage
 /coverage
+/na-porta-api/coverage
 /.nyc_output
 
-# IDEs and editors
+# IDEs
 /.idea
 .project
 .classpath
@@ -28,21 +33,23 @@ lerna-debug.log*
 .settings/
 *.sublime-workspace
 
-# IDE - VSCode
-.vscode/*
+# VSCode settings (keep only settings, tasks, launch and extensions)
+/.vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# dotenv environment variable files
+# dotenv environment files
 .env
 .env.development.local
 .env.test.local
 .env.production.local
 .env.local
+/na-porta-api/.env
+/na-porta-api/.env.*.local
 
-# temp directory
+# Temp files
 .temp
 .tmp
 
@@ -52,5 +59,5 @@ pids
 *.seed
 *.pid.lock
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
+# Diagnostic reports
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
