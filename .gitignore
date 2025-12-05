@@ -40,14 +40,6 @@ yarn-error.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# dotenv environment files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
-/na-porta-api/.env
-/na-porta-api/.env.*.local
 
 # Temp files
 .temp
