@@ -94,6 +94,8 @@ Retorna token JWT:
 }
 ```
 
+
+
 Use no header de pedidos:
 ```bash
 Authorization: Bearer <token>
@@ -106,10 +108,38 @@ Authorization: Bearer <token>
 | POST   | `/orders`                     | Criar pedido                |
 | GET    | `/orders`                     | Listar pedidos              |
 | GET    | `/orders/:id`                 | Pedido por ID               |
-| PATCH  | `/orders/:id`                 | Atualizar status            |
+| PATCH  | `/orders/:id`                 | Atualizar um peidido        |
 | DELETE | `/orders/:id`                 | Exclusão lógica             |
 | POST   | `/orders/calculate-order/:id` | Calcula total via GoService |
 
+
+Criar um pedido
+POST /orders
+```bash
+{
+  "number": "P-1008",
+  "expectedDeliveryDate": "2026-01-02",
+  "clientName": "João Silva",
+  "clientDocument": "123.456.789-00",
+  "deliveryAddress": "Rua Central, 123",
+  "items": [
+    { "description": "Produto A", "price": 50.9 },
+    { "description": "Produto B", "price": 20.5 }
+  ],
+  "status": "novopedido"
+}
+```
+
+Atualizar um pedido
+PATCH /orders/:id
+
+```bash
+atualzinado o nome e o status do pedido
+{
+  "clientName": "João Pedro Silva",
+  "status": "em_transporte"
+}
+```
 
 O payload de produtos para cálculo deve incluir description, price e quantity.
 
