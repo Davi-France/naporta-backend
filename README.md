@@ -132,6 +132,6 @@ Necessário que o microserviço Go esteja rodando e o MongoDB acessível.
 
 JWT: configure JWT_SECRET no .env.
 
-GoService: precisa estar rodando e acessível na URL do .env.
+GoService: precisa estar rodando
 
 Testes e endpoints dependem do token JWT válido.
