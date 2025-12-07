@@ -53,9 +53,9 @@ A API estará disponível em http://localhost:3000.
 ### 3️⃣ Microserviço Go
 
 Entre na pasta:
-
+```bash
 cd backend/naporta-go
-
+```
 
 Rode o serviço:
 ```bash
@@ -100,15 +100,16 @@ Authorization: Bearer <token>
 ```
 
 ## 📌 Endpoints de Pedidos
-```bash
-Método	Endpoint	Descrição
-POST	/orders	Criar pedido
-GET	/orders	Listar pedidos
-GET	/orders/:id	Pedido por ID
-PATCH	/orders/:id	Atualizar status
-DELETE	/orders/:id	Exclusão lógica
-POST	/orders/calculate-order/:id	Calcula total via GoService
-```
+
+| Método | Endpoint                      | Descrição                   |
+| ------ | ----------------------------- | --------------------------- |
+| POST   | `/orders`                     | Criar pedido                |
+| GET    | `/orders`                     | Listar pedidos              |
+| GET    | `/orders/:id`                 | Pedido por ID               |
+| PATCH  | `/orders/:id`                 | Atualizar status            |
+| DELETE | `/orders/:id`                 | Exclusão lógica             |
+| POST   | `/orders/calculate-order/:id` | Calcula total via GoService |
+
 
 O payload de produtos para cálculo deve incluir description, price e quantity.
 
