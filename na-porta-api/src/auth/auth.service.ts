@@ -34,7 +34,7 @@ export class AuthService {
     const isPasswordValid = await bcrypt.compare(dto.password, user.password);
 
     if (!isPasswordValid) {
-      throw new UnauthorizedException('Invalid credentials');
+      throw new UnauthorizedException('Credencial invalidas');
     }
 
     const payload = { sub: user.id, email: user.email };
